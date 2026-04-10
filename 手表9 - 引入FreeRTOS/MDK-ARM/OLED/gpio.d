@@ -43,7 +43,6 @@ oled\gpio.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\stdarg.h
 oled\gpio.o: ../Core/Inc/rtc.h
 oled\gpio.o: ../int/MY_RTC.h
 oled\gpio.o: ../int/KEY.h
-oled\gpio.o: ../Core/Inc/tim.h
 oled\gpio.o: ../int/GLOBAL.h
 oled\gpio.o: ../int/Settings.h
 oled\gpio.o: ../int/SetTime.h

@@ -61,7 +61,7 @@ extern uint8_t CurrMode,NextMode;
 
 /* Exported constants --------------------------------------------------------*/
 /* USER CODE BEGIN EC */
-
+void SystemClock_Config(void);
 /* USER CODE END EC */
 
 /* Exported macro ------------------------------------------------------------*/

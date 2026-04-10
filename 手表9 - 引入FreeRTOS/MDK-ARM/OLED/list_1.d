@@ -1,0 +1,12 @@
+oled\list_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
+oled\list_1.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+oled\list_1.o: ../FreeRTOS/include/FreeRTOS.h
+oled\list_1.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\stddef.h
+oled\list_1.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\stdint.h
+oled\list_1.o: ../FreeRTOS/include/FreeRTOSConfig.h
+oled\list_1.o: ../FreeRTOS/include/projdefs.h
+oled\list_1.o: ../FreeRTOS/include/portable.h
+oled\list_1.o: ../FreeRTOS/include/deprecated_definitions.h
+oled\list_1.o: ../FreeRTOS/portable/portmacro.h
+oled\list_1.o: ../FreeRTOS/include/mpu_wrappers.h
+oled\list_1.o: ../FreeRTOS/include/list.h

@@ -43,7 +43,6 @@ oled\oled.o: ../int/OLED.h
 oled\oled.o: ../Core/Inc/rtc.h
 oled\oled.o: ../int/MY_RTC.h
 oled\oled.o: ../int/KEY.h
-oled\oled.o: ../Core/Inc/tim.h
 oled\oled.o: ../int/GLOBAL.h
 oled\oled.o: ../int/Settings.h
 oled\oled.o: ../int/SetTime.h

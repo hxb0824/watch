@@ -94,9 +94,14 @@ uint8_t OLED_DisplayBuf[8][128];
 void OLED_W_SCL(uint8_t BitValue)
 {
 	/*根据BitValue的值，将SCL置高电平或者低电平*/
-	HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12,( GPIO_PinState)BitValue);
+	//HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12,( GPIO_PinState)BitValue);
 	
-	
+	/* // 使用寄存器直接控制，比 HAL 库快无数倍 */
+    if(BitValue)
+        GPIOB->BSRR = GPIO_PIN_12; // 置高电平
+    else
+        GPIOB->BRR  = GPIO_PIN_12; // 置低电平 (STM32F1专用)
+
 	/*如果单片机速度过快，可在此添加适量延时，以避免超出I2C通信的最大速度*/
 	//...
 }
@@ -112,7 +117,12 @@ void OLED_W_SCL(uint8_t BitValue)
 void OLED_W_SDA(uint8_t BitValue)
 {
 	/*根据BitValue的值，将SDA置高电平或者低电平*/
-		HAL_GPIO_WritePin(GPIOB,GPIO_PIN_13,( GPIO_PinState)BitValue);
+	/* 	HAL_GPIO_WritePin(GPIOB,GPIO_PIN_13,( GPIO_PinState)BitValue); */
+
+		if(BitValue)
+        GPIOB->BSRR = GPIO_PIN_13;
+    	else
+        GPIOB->BRR  = GPIO_PIN_13;
 	
 	/*如果单片机速度过快，可在此添加适量延时，以避免超出I2C通信的最大速度*/
 	//...

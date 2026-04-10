@@ -42,7 +42,6 @@ oled\main.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\stdarg.h
 oled\main.o: ../Core/Inc/rtc.h
 oled\main.o: ../int/MY_RTC.h
 oled\main.o: ../int/KEY.h
-oled\main.o: ../Core/Inc/tim.h
 oled\main.o: ../int/GLOBAL.h
 oled\main.o: ../int/Settings.h
 oled\main.o: ../int/SetTime.h

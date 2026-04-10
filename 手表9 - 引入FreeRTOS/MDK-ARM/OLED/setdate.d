@@ -43,7 +43,6 @@ oled\setdate.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\stdarg.h
 oled\setdate.o: ../Core/Inc/rtc.h
 oled\setdate.o: ../int/MY_RTC.h
 oled\setdate.o: ../int/KEY.h
-oled\setdate.o: ../Core/Inc/tim.h
 oled\setdate.o: ../int/GLOBAL.h
 oled\setdate.o: ../int/Settings.h
 oled\setdate.o: ../int/SetTime.h

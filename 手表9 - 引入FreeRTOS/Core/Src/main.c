@@ -19,7 +19,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "rtc.h"
-#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -102,10 +101,8 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   MX_RTC_Init();
-  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 	OLED_Init();
-  HAL_TIM_Base_Start_IT(&htim2);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -175,14 +172,7 @@ void SystemClock_Config(void)
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-    if(htim==&htim2)
-    {
-        TIM_Tick();
-        StopWatch_Tick();
-        LOW_Tick();
-        switch_Tick();
-    }
-    else  if (htim->Instance == TIM4)
+   if (htim->Instance == TIM4)
    {
     HAL_IncTick();
    }

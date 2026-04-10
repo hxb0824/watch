@@ -1,55 +1,95 @@
 #include "FreeRTOS_Task.h"
+#include "Queue.h"
 
-// 任务函数声明
-void main_Task(void *pvParameters);
+TaskHandle_t GUI_Task_Handle = NULL;
+TaskHandle_t Tick_Task_Handle = NULL;
 
-// 任务配置
-#define MAIN_TASK_STACK    256  // 增加到256，128对于复杂的UI逻辑可能不够
-#define MAIN_TASK_PRIO     2
-TaskHandle_t main_Task_Handle = NULL;
+void GUI_Task(void *pvParameters);
+void Tick_Task(void *pvParameters);
+
+
+
+extern uint8_t move_state;      // 菜单滑动状态 (在 menu.c 中)
+extern uint8_t stopwatch_flag;  // 秒表运行状态 (在 stopwatch.c 中)
+
+QueueHandle_t Queue_Key; // 用于按键事件的队列
+uint16_t Current_Key_Msg=0;
 
 void FreeRTOS_Start(void)
 {
-    // 直接创建主任务
-    BaseType_t xReturn = xTaskCreate(
-        (TaskFunction_t )main_Task,     
-        (const char* )"Main_Task",   // 任务名字
-        (uint16_t       )MAIN_TASK_STACK, 
-        (void* )NULL,          
-        (UBaseType_t    )MAIN_TASK_PRIO, 
-        (TaskHandle_t* )&main_Task_Handle // 传入句柄的地址
-    );
 
-    if (xReturn == pdPASS)
-    {
-        vTaskStartScheduler(); // 启动调度器
-    }
+    Queue_Key = xQueueCreate(20, sizeof(uint16_t)); // 创建一个长度为20的队列，每个元素大小为uint16_t
+
+    // 后台任务优先级应低于前台任务
+    xTaskCreate(GUI_Task, "GUI_Task", 1024, NULL, 2, &GUI_Task_Handle);
+    xTaskCreate(Tick_Task, "Tick_Task", 256, NULL, 3, &Tick_Task_Handle);
+    vTaskStartScheduler();
 }
 
-void main_Task(void *pvParameters)
+// ==========================================
+// 任务1：前台界面任务 
+// ==========================================
+void GUI_Task(void *pvParameters)
 {
-    // 1. 初始化当前模式 (只需执行一次)
+
+
     GLOBAL_init(CurrMode); 
 
-    // 2. 进入死循环，这才是 FreeRTOS 任务的正确形态
-    for(;;) 
+    while (1)
     {
-        // 建议先注释掉低功耗，调通逻辑后再开启
-        // LOW_Loop();
-        // switch_Loop();
 
+        TickType_t wait_time; 
+        
+        if (move_state == 1 || stopwatch_flag == 1) 
+        {
+            wait_time = pdMS_TO_TICKS(20);
+        } 
+        else 
+        {
+            wait_time = pdMS_TO_TICKS(1000);
+        }
+
+        if (xQueueReceive(Queue_Key, &Current_Key_Msg, wait_time) != pdTRUE)
+        {
+            Current_Key_Msg=0; // 超时未收到消息，清零
+        }
+
+
+         // 1. 先检测是否需要休眠或关机
+        LOW_Loop();
+        switch_Loop();
+
+
+        // 3. 醒来后执行画面刷新
         if (CurrMode == NextMode)
         {
-            GLOBAL_Loop(CurrMode);
+            GLOBAL_Loop(CurrMode); 
         }
-        else
+        if (CurrMode!=NextMode)
         {
-            GLOBAL_Exit(CurrMode);
-            GLOBAL_init(NextMode);
-            CurrMode = NextMode;
+            GLOBAL_Exit(CurrMode); 
+            GLOBAL_init(NextMode); 
+            CurrMode = NextMode;   
         }
-
-        // 这里的 20 是 Tick 数。如果你的系统频率是 1000Hz，这就是 20ms
-        vTaskDelay(pdMS_TO_TICKS(20)); 
     }
 }
+
+// ==========================================
+// 任务2：后台计时任务 (事件大总管)
+// ==========================================
+void Tick_Task(void *pvParameters)
+{
+    TickType_t xLastWakeTime = xTaskGetTickCount(); 
+    while (1)
+    {
+        TIM_Tick();        // 扫描按键
+        StopWatch_Tick();  
+        LOW_Tick();        
+        switch_Tick();     
+
+        vTaskDelayUntil(&xLastWakeTime, 1); 
+    }
+}
+
+
+

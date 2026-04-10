@@ -43,7 +43,6 @@ oled\stopwatch.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\stdarg.h
 oled\stopwatch.o: ../Core/Inc/rtc.h
 oled\stopwatch.o: ../int/MY_RTC.h
 oled\stopwatch.o: ../int/KEY.h
-oled\stopwatch.o: ../Core/Inc/tim.h
 oled\stopwatch.o: ../int/GLOBAL.h
 oled\stopwatch.o: ../int/Settings.h
 oled\stopwatch.o: ../int/SetTime.h

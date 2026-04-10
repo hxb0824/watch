@@ -57,7 +57,6 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim4;
 
 /* USER CODE BEGIN EV */
@@ -151,7 +150,7 @@ void UsageFault_Handler(void)
   * @brief This function handles Debug monitor.
   */
 void DebugMon_Handler(void)
-{
+   {
   /* USER CODE BEGIN DebugMonitor_IRQn 0 */
 
   /* USER CODE END DebugMonitor_IRQn 0 */
@@ -164,21 +163,20 @@ void DebugMon_Handler(void)
   * @brief This function handles Pendable request for system service.
   */
 
-
 /**
   * @brief This function handles System tick timer.
   */
 void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
+    if (xTaskGetSchedulerState() != taskSCHEDULER_NOT_STARTED)
+	    {
+	    	xPortSysTickHandler();
 
+    	}
   /* USER CODE END SysTick_IRQn 0 */
 
   /* USER CODE BEGIN SysTick_IRQn 1 */
-  if(xTaskGetSchedulerState()!=taskSCHEDULER_NOT_STARTED)
-  {
-      xPortSysTickHandler();
-  }
 
   /* USER CODE END SysTick_IRQn 1 */
 }
@@ -202,20 +200,6 @@ void EXTI0_IRQHandler(void)
   /* USER CODE BEGIN EXTI0_IRQn 1 */
 
   /* USER CODE END EXTI0_IRQn 1 */
-}
-
-/**
-  * @brief This function handles TIM2 global interrupt.
-  */
-void TIM2_IRQHandler(void)
-{
-  /* USER CODE BEGIN TIM2_IRQn 0 */
-
-  /* USER CODE END TIM2_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim2);
-  /* USER CODE BEGIN TIM2_IRQn 1 */
-
-  /* USER CODE END TIM2_IRQn 1 */
 }
 
 /**

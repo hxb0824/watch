@@ -3,7 +3,6 @@
 "oled\main.o"
 "oled\gpio.o"
 "oled\rtc.o"
-"oled\tim.o"
 "oled\usart.o"
 "oled\stm32f1xx_it.o"
 "oled\stm32f1xx_hal_msp.o"

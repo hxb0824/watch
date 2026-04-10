@@ -2,7 +2,7 @@
 #define __KEY_H__
 
 #include "main.h"
-#include "tim.h"
+//#include "tim.h"
 
 #define KEY_OK 0
 #define KEY_NO 1

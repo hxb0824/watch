@@ -42,7 +42,6 @@ oled\stm32f1xx_hal_msp.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\stdarg.h
 oled\stm32f1xx_hal_msp.o: ../Core/Inc/rtc.h
 oled\stm32f1xx_hal_msp.o: ../int/MY_RTC.h
 oled\stm32f1xx_hal_msp.o: ../int/KEY.h
-oled\stm32f1xx_hal_msp.o: ../Core/Inc/tim.h
 oled\stm32f1xx_hal_msp.o: ../int/GLOBAL.h
 oled\stm32f1xx_hal_msp.o: ../int/Settings.h
 oled\stm32f1xx_hal_msp.o: ../int/SetTime.h

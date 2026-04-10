@@ -61,4 +61,4 @@ oled\key.o: ../FreeRTOS/include/mpu_wrappers.h
 oled\key.o: ../FreeRTOS/include/task.h
 oled\key.o: ../FreeRTOS/include/list.h
 oled\key.o: ../int/FreeRTOS_Task.h
-oled\key.o: ../Core/Inc/tim.h
+oled\key.o: ../FreeRTOS/include/queue.h

@@ -1,0 +1,15 @@
+oled\event_groups.o: ..\FreeRTOS\event_groups.c
+oled\event_groups.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+oled\event_groups.o: ../FreeRTOS/include/FreeRTOS.h
+oled\event_groups.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\stddef.h
+oled\event_groups.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\stdint.h
+oled\event_groups.o: ../FreeRTOS/include/FreeRTOSConfig.h
+oled\event_groups.o: ../FreeRTOS/include/projdefs.h
+oled\event_groups.o: ../FreeRTOS/include/portable.h
+oled\event_groups.o: ../FreeRTOS/include/deprecated_definitions.h
+oled\event_groups.o: ../FreeRTOS/portable/portmacro.h
+oled\event_groups.o: ../FreeRTOS/include/mpu_wrappers.h
+oled\event_groups.o: ../FreeRTOS/include/task.h
+oled\event_groups.o: ../FreeRTOS/include/list.h
+oled\event_groups.o: ../FreeRTOS/include/timers.h
+oled\event_groups.o: ../FreeRTOS/include/event_groups.h

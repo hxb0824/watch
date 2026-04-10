@@ -1,5 +1,5 @@
 Dependencies for Project 'OLED', Target 'OLED': (DO NOT MODIFY !)
-F (startup_stm32f103xb.s)(0x69D0C14F)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_OLED-ID:\keil\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o oled\startup_stm32f103xb.o --depend oled\startup_stm32f103xb.d)
+F (startup_stm32f103xb.s)(0x69D32668)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_OLED-ID:\keil\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o oled\startup_stm32f103xb.o --depend oled\startup_stm32f103xb.d)
 F (../Core/Src/main.c)(0x69D1C694)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../int --locale=english-I.\RTE\_OLED-ID:\keil\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o oled\main.o --omf_browse oled\main.crf --depend oled\main.d)
 I (../Core/Inc/main.h)(0x69D07163)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x69103018)
@@ -41,14 +41,14 @@ I (D:\keil\keil\ARM\ARMCC\include\math.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (../Core/Inc/rtc.h)(0x69BD33FE)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../Core/Inc/tim.h)(0x69C2556F)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
 F (../Core/Src/gpio.c)(0x69D0C14D)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../int --locale=english-I.\RTE\_OLED-ID:\keil\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o oled\gpio.o --omf_browse oled\gpio.crf --depend oled\gpio.d)
@@ -92,14 +92,14 @@ I (D:\keil\keil\ARM\ARMCC\include\math.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (../Core/Inc/rtc.h)(0x69BD33FE)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../Core/Inc/tim.h)(0x69C2556F)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
 F (../Core/Src/rtc.c)(0x69D0C16C)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../int --locale=english-I.\RTE\_OLED-ID:\keil\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o oled\rtc.o --omf_browse oled\rtc.crf --depend oled\rtc.d)
@@ -143,14 +143,14 @@ I (D:\keil\keil\ARM\ARMCC\include\string.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\math.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../Core/Inc/tim.h)(0x69C2556F)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
 F (../Core/Src/tim.c)(0x69C25577)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../int --locale=english-I.\RTE\_OLED-ID:\keil\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o oled\tim.o --omf_browse oled\tim.crf --depend oled\tim.d)
@@ -195,13 +195,13 @@ I (D:\keil\keil\ARM\ARMCC\include\math.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (../Core/Inc/rtc.h)(0x69BD33FE)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
 F (../Core/Src/usart.c)(0x6922A678)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../int --locale=english-I.\RTE\_OLED-ID:\keil\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o oled\usart.o --omf_browse oled\usart.crf --depend oled\usart.d)
@@ -245,14 +245,14 @@ I (D:\keil\keil\ARM\ARMCC\include\math.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (../Core/Inc/rtc.h)(0x69BD33FE)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../Core/Inc/tim.h)(0x69C2556F)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
 F (../Core/Src/stm32f1xx_it.c)(0x69D0C14E)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../int --locale=english-I.\RTE\_OLED-ID:\keil\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o oled\stm32f1xx_it.o --omf_browse oled\stm32f1xx_it.crf --depend oled\stm32f1xx_it.d)
@@ -296,14 +296,14 @@ I (D:\keil\keil\ARM\ARMCC\include\math.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (../Core/Inc/rtc.h)(0x69BD33FE)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../Core/Inc/tim.h)(0x69C2556F)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
 I (../Core/Inc/stm32f1xx_it.h)(0x69D0C14E)
@@ -348,14 +348,14 @@ I (D:\keil\keil\ARM\ARMCC\include\math.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (../Core/Inc/rtc.h)(0x69BD33FE)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../Core/Inc/tim.h)(0x69C2556F)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c)(0x69103018)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../int --locale=english-I.\RTE\_OLED-ID:\keil\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o oled\stm32f1xx_hal_gpio_ex.o --omf_browse oled\stm32f1xx_hal_gpio_ex.crf --depend oled\stm32f1xx_hal_gpio_ex.d)
@@ -910,14 +910,14 @@ I (../Core/Inc/usart.h)(0x6922A678)
 I (../int/OLED.h)(0x69C25BD4)
 I (../Core/Inc/rtc.h)(0x69BD33FE)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../Core/Inc/tim.h)(0x69C2556F)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
 F (..\int\OLED.h)(0x69C25BD4)()
@@ -968,18 +968,18 @@ I (D:\keil\keil\ARM\ARMCC\include\math.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (../Core/Inc/rtc.h)(0x69BD33FE)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../Core/Inc/tim.h)(0x69C2556F)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
-F (..\int\KEY.c)(0x69D1CAFE)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../int --locale=english-I.\RTE\_OLED-ID:\keil\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o oled\key.o --omf_browse oled\key.crf --depend oled\key.d)
-I (..\int\KEY.h)(0x69D1C3B9)
+F (..\int\KEY.c)(0x69D3267C)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../int --locale=english-I.\RTE\_OLED-ID:\keil\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o oled\key.o --omf_browse oled\key.crf --depend oled\key.d)
+I (..\int\KEY.h)(0x69D3267C)
 I (../Core/Inc/main.h)(0x69D07163)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x69103018)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x69C2556F)
@@ -1020,17 +1020,17 @@ I (D:\keil\keil\ARM\ARMCC\include\math.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (../Core/Inc/rtc.h)(0x69BD33FE)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
 I (../Core/Inc/tim.h)(0x69C2556F)
-F (..\int\KEY.h)(0x69D1C3B9)()
+F (..\int\KEY.h)(0x69D3267C)()
 F (..\int\GLOBAL.c)(0x69CCD3DA)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../int --locale=english-I.\RTE\_OLED-ID:\keil\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o oled\global.o --omf_browse oled\global.crf --depend oled\global.d)
 I (..\int\GLOBAL.h)(0x69C3C117)
 I (../Core/Inc/main.h)(0x69D07163)
@@ -1073,14 +1073,14 @@ I (D:\keil\keil\ARM\ARMCC\include\math.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (../Core/Inc/rtc.h)(0x69BD33FE)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../Core/Inc/tim.h)(0x69C2556F)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
 F (..\int\GLOBAL.h)(0x69C3C117)()
@@ -1126,14 +1126,14 @@ I (D:\keil\keil\ARM\ARMCC\include\math.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (../Core/Inc/rtc.h)(0x69BD33FE)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../Core/Inc/tim.h)(0x69C2556F)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
 F (..\int\Settings.h)(0x69C3C6F1)()
@@ -1179,14 +1179,14 @@ I (D:\keil\keil\ARM\ARMCC\include\math.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (../Core/Inc/rtc.h)(0x69BD33FE)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../Core/Inc/tim.h)(0x69C2556F)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
 F (..\int\SetTime.h)(0x69C4DCE6)()
@@ -1232,18 +1232,18 @@ I (D:\keil\keil\ARM\ARMCC\include\math.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (../Core/Inc/rtc.h)(0x69BD33FE)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../Core/Inc/tim.h)(0x69C2556F)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
 F (..\int\SetDate.h)(0x69C4E6A5)()
-F (..\int\menu.c)(0x69CCDEAC)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../int --locale=english-I.\RTE\_OLED-ID:\keil\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o oled\menu.o --omf_browse oled\menu.crf --depend oled\menu.d)
+F (..\int\menu.c)(0x69D5ABF7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../int --locale=english-I.\RTE\_OLED-ID:\keil\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o oled\menu.o --omf_browse oled\menu.crf --depend oled\menu.d)
 I (..\int\menu.h)(0x69CCA62D)
 I (../Core/Inc/main.h)(0x69D07163)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x69103018)
@@ -1285,19 +1285,19 @@ I (D:\keil\keil\ARM\ARMCC\include\math.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (../Core/Inc/rtc.h)(0x69BD33FE)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../Core/Inc/tim.h)(0x69C2556F)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
 F (..\int\menu.h)(0x69CCA62D)()
-F (..\int\stopwatch.c)(0x69D1C3BA)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../int --locale=english-I.\RTE\_OLED-ID:\keil\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o oled\stopwatch.o --omf_browse oled\stopwatch.crf --depend oled\stopwatch.d)
-I (..\int\stopwatch.h)(0x69D1C3BA)
+F (..\int\stopwatch.c)(0x69D3267C)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../int --locale=english-I.\RTE\_OLED-ID:\keil\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o oled\stopwatch.o --omf_browse oled\stopwatch.crf --depend oled\stopwatch.d)
+I (..\int\stopwatch.h)(0x69D3267C)
 I (../Core/Inc/main.h)(0x69D07163)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x69103018)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x69C2556F)
@@ -1338,17 +1338,17 @@ I (D:\keil\keil\ARM\ARMCC\include\math.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (../Core/Inc/rtc.h)(0x69BD33FE)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../Core/Inc/tim.h)(0x69C2556F)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
-F (..\int\stopwatch.h)(0x69D1C3BA)()
+F (..\int\stopwatch.h)(0x69D3267C)()
 F (..\int\led.c)(0x69CCD9B6)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../int --locale=english-I.\RTE\_OLED-ID:\keil\keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o oled\led.o --omf_browse oled\led.crf --depend oled\led.d)
 I (..\int\led.h)(0x69CCCE99)
 I (../Core/Inc/main.h)(0x69D07163)
@@ -1391,14 +1391,14 @@ I (D:\keil\keil\ARM\ARMCC\include\math.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (../Core/Inc/rtc.h)(0x69BD33FE)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../Core/Inc/tim.h)(0x69C2556F)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
 F (..\int\led.h)(0x69CCCE99)()
@@ -1444,14 +1444,14 @@ I (D:\keil\keil\ARM\ARMCC\include\math.h)(0x588B8344)
 I (D:\keil\keil\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (../Core/Inc/rtc.h)(0x69BD33FE)
 I (../int/MY_RTC.h)(0x69C3C117)
-I (../int/KEY.h)(0x69D1C3B9)
+I (../int/KEY.h)(0x69D3267C)
 I (../Core/Inc/tim.h)(0x69C2556F)
 I (../int/GLOBAL.h)(0x69C3C117)
 I (../int/Settings.h)(0x69C3C6F1)
 I (../int/SetTime.h)(0x69C4DCE6)
 I (../int/SetDate.h)(0x69C4E6A5)
 I (../int/menu.h)(0x69CCA62D)
-I (../int/stopwatch.h)(0x69D1C3BA)
+I (../int/stopwatch.h)(0x69D3267C)
 I (../int/led.h)(0x69CCCE99)
 I (../int/low.h)(0x69D1C694)
 F (..\int\low.h)(0x69D1C694)()

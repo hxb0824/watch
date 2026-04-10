@@ -113,6 +113,13 @@ void menu_Init(void)
 void menu_Loop(void)
 {
     static int8_t flag=0;
+	
+	if(move_state==1)
+	{
+			move_start();
+		return;
+	}
+	
 
 
     // 检测按键0（向左移动）

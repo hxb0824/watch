@@ -43,7 +43,6 @@ oled\freertos_task.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\stdarg.h
 oled\freertos_task.o: ../Core/Inc/rtc.h
 oled\freertos_task.o: ../int/MY_RTC.h
 oled\freertos_task.o: ../int/KEY.h
-oled\freertos_task.o: ../Core/Inc/tim.h
 oled\freertos_task.o: ../int/GLOBAL.h
 oled\freertos_task.o: ../int/Settings.h
 oled\freertos_task.o: ../int/SetTime.h
@@ -62,3 +61,4 @@ oled\freertos_task.o: ../FreeRTOS/include/mpu_wrappers.h
 oled\freertos_task.o: ../FreeRTOS/include/task.h
 oled\freertos_task.o: ../FreeRTOS/include/list.h
 oled\freertos_task.o: ../int/FreeRTOS_Task.h
+oled\freertos_task.o: ../FreeRTOS/include/Queue.h
