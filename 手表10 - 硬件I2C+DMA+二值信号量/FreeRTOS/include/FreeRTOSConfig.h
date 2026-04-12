@@ -110,6 +110,14 @@ NVIC value of 255. */
 
 //#define configSUPPORT_DYNAMIC_ALLOCATION 1
 
+void PRE_TICKLESS_SLEEP(void);
+void POST_TICKLESS_SLEEP(void);
+
+//开启低功耗模式
+#define configUSE_TICKLESS_IDLE 1
+#define configPRE_SLEEP_PROCESSING(X)   PRE_TICKLESS_SLEEP()
+#define configPOST_SLEEP_PROCESSING(X)   POST_TICKLESS_SLEEP()
+
 
 
 

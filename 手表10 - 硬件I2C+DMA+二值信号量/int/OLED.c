@@ -119,18 +119,19 @@ void OLED_Reset(void)
 		}
 
         HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET); // SCL 拉低
-        vTaskDelay(pdMS_TO_TICKS(1)); // 这里的延时是为了让 OLED 反应过来
+      	HAL_Delay(1);		// 这里的延时是为了让 OLED 反应过来
         HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);   // SCL 拉高
-        vTaskDelay(pdMS_TO_TICKS(1));
+        HAL_Delay(1);
     }
 
+	//发送停止信号
 	HAL_GPIO_WritePin(GPIOB,GPIO_PIN_6,GPIO_PIN_RESET);
 	vTaskDelay(pdMS_TO_TICKS(1));
 	HAL_GPIO_WritePin(GPIOB,GPIO_PIN_7,GPIO_PIN_RESET);
 	vTaskDelay(pdMS_TO_TICKS(1));
 	HAL_GPIO_WritePin(GPIOB,GPIO_PIN_6,GPIO_PIN_SET);
 	vTaskDelay(pdMS_TO_TICKS(1));
-	HAL_GPIO_WritePin(GPIOB,GPIO_PIN_7,GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(GPIOB,GPIO_PIN_7,GPIO_PIN_SET);
 	vTaskDelay(pdMS_TO_TICKS(1));
 
 
@@ -384,6 +385,7 @@ void OLED_Update(void)
     while(HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY)
     {
         timeout--;
+		//再次检测总线状态，如果总线仍然没有空闲，则认为可能是总线卡死了，进行复位处理
         if(timeout == 0) 
         {
             OLED_Reset(); 
@@ -393,21 +395,23 @@ void OLED_Update(void)
     
     // 2. 发送寻址命令 (打包发送更安全)
     uint8_t cmd[6] = {0x21, 0x00, 0x7F, 0x22, 0x00, 0x07};
-    for(int i = 0; i < 6; i++)
+     // 任何一个配置命令发送失败，绝不能继续！立刻 Reset 并弃帧！
+    if(HAL_I2C_Mem_Write(&hi2c1, 0x78, 0x00, I2C_MEMADD_SIZE_8BIT, cmd, 6, 100) != HAL_OK)
     {
-        // 任何一个配置命令发送失败，绝不能继续！立刻 Reset 并弃帧！
-        if(HAL_I2C_Mem_Write(&hi2c1, 0x78, 0x00, I2C_MEMADD_SIZE_8BIT, &cmd[i], 1, 100) != HAL_OK)
-        {
-            OLED_Reset(); 
-            return; // 【关键】：防止无寻址乱泼数据导致光标跑飞！
-        }
+        OLED_Reset(); 
+        return; 
     }
+    
 
     // 3. 寻址 100% 成功，安全开启 DMA 发送显存
     if (HAL_I2C_Mem_Write_DMA(&hi2c1, 0x78, 0x40, I2C_MEMADD_SIZE_8BIT, (uint8_t*)OLED_DisplayBuf, 1024) == HAL_OK)
     {
         // 只有 DMA 成功起跑，任务才去挂起死等
+		//这里要获取两次信号量，是为了防止毒残留，如果在上面的寻址命令出现干扰导致发送失败，我们设置了I2C发送失败中断并在中段中释放过二值信号量如果这里只获取一次，不会进入阻塞，直接获取到了，所以这里要先获取一次消除寻址失败后导致的信号量释放
+		 xSemaphoreTake(OLEDSemaphore, 0); 
         xSemaphoreTake(OLEDSemaphore, portMAX_DELAY); 
+
+		
     }
     else
     {

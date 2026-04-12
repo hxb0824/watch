@@ -1,0 +1,13 @@
+oled\croutine_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+oled\croutine_1.o: ../FreeRTOS/include/FreeRTOS.h
+oled\croutine_1.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\stddef.h
+oled\croutine_1.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\stdint.h
+oled\croutine_1.o: ../FreeRTOS/include/FreeRTOSConfig.h
+oled\croutine_1.o: ../FreeRTOS/include/projdefs.h
+oled\croutine_1.o: ../FreeRTOS/include/portable.h
+oled\croutine_1.o: ../FreeRTOS/include/deprecated_definitions.h
+oled\croutine_1.o: ../FreeRTOS/portable/portmacro.h
+oled\croutine_1.o: ../FreeRTOS/include/mpu_wrappers.h
+oled\croutine_1.o: ../FreeRTOS/include/task.h
+oled\croutine_1.o: ../FreeRTOS/include/list.h
+oled\croutine_1.o: ../FreeRTOS/include/croutine.h

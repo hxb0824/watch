@@ -114,6 +114,7 @@ void menu_Loop(void)
 {
     static int8_t flag=0;
 
+    //开启动画锁，如果此时动画在滚动，那不执行按键操作
     if (move_state == 1)
     {
         move_start();

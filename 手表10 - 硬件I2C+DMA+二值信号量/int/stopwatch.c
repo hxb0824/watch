@@ -1,4 +1,5 @@
 #include "stopwatch.h"
+#include "rtc.h"
 
 static  uint16_t M=0,K=0;
 uint8_t stopwatch_flag=0;
@@ -21,6 +22,7 @@ void StopWatch_Init(void)
 void StopWatch_Loop(void)
 {
     OLED_Clear();
+    
     //表示开始计时
      if(KEY_Check(0,KEY_SINGLE))
     {
