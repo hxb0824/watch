@@ -147,7 +147,7 @@ void OLED_Reset(void)
 void OLED_WriteCommand(uint8_t Command)
 {
 
-	uint32_t I2C_NUM = 500000;
+	 uint32_t I2C_NUM = 500000;
 
 	// DMA触发中断不代表数据已经完全发送完了，DMA中断只是代表数据已经从内存发出，进入了I2C外设的发送缓冲区
 	// 因此在发送下一条命令之前，必须确保上一次命令的数据已经完全发送完了，否则就会发生数据冲突，导致OLED显示异常

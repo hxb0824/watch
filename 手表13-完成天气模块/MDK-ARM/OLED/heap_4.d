@@ -1,0 +1,14 @@
+oled\heap_4.o: ..\FreeRTOS\portable\heap_4.c
+oled\heap_4.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+oled\heap_4.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\string.h
+oled\heap_4.o: ../FreeRTOS/include/FreeRTOS.h
+oled\heap_4.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\stddef.h
+oled\heap_4.o: D:\keil\keil\ARM\ARMCC\Bin\..\include\stdint.h
+oled\heap_4.o: ../FreeRTOS/include/FreeRTOSConfig.h
+oled\heap_4.o: ../FreeRTOS/include/projdefs.h
+oled\heap_4.o: ../FreeRTOS/include/portable.h
+oled\heap_4.o: ../FreeRTOS/include/deprecated_definitions.h
+oled\heap_4.o: ../FreeRTOS/portable/portmacro.h
+oled\heap_4.o: ../FreeRTOS/include/mpu_wrappers.h
+oled\heap_4.o: ../FreeRTOS/include/task.h
+oled\heap_4.o: ../FreeRTOS/include/list.h

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [OLED\OLED.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image OLED\OLED.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Sun Apr 12 12:20:17 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Thu Apr 16 19:54:52 2026
 <BR><P>
 <H3>Maximum Stack Usage =        256 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -432,12 +432,12 @@ Global Symbols
 <P><STRONG><a name="[57]"></a>FreeRTOS_Start</STRONG> (Thumb, 122 bytes, Stack size 16 bytes, freertos_task.o(i.FreeRTOS_Start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = FreeRTOS_Start &rArr; vTaskStartScheduler &rArr; prvCreateIdleTasks &rArr; xTaskCreate &rArr; prvCreateTask &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTimerCreate
+<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetTickCount
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTimerCreate
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTimerGenericCommandFromTask
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetTickCount
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -591,8 +591,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[fe]"></a>HAL_GPIO_ReadPin</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f1xx_hal_gpio.o(i.HAL_GPIO_ReadPin))
-<BR><BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Reset
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_State
+<BR><BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_State
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Reset
 </UL>
 
 <P><STRONG><a name="[103]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f1xx_hal_gpio.o(i.HAL_GPIO_WritePin))
@@ -1165,10 +1165,10 @@ Global Symbols
 <P><STRONG><a name="[38]"></a>KeyTimer_Callback</STRONG> (Thumb, 454 bytes, Stack size 32 bytes, key.o(i.KeyTimer_Callback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = KeyTimer_Callback &rArr; xTimerGenericCommandFromTask &rArr; xQueueGenericSend &rArr; vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTimerGenericCommandFromTask
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetTickCount
+<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetTickCount
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_State
+<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTimerGenericCommandFromTask
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> freertos_task.o(i.FreeRTOS_Start)
 </UL>
@@ -2270,9 +2270,9 @@ Global Symbols
 <LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueFull
 <LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Reset
+<BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyTimer_Callback
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Reset
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTimerGenericCommandFromTask
-<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyTimer_Callback
 </UL>
 
 <P><STRONG><a name="[16a]"></a>xQueueGenericSendFromISR</STRONG> (Thumb, 154 bytes, Stack size 56 bytes, queue.o(i.xQueueGenericSendFromISR))
